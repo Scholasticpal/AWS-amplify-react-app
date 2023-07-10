@@ -1,38 +1,85 @@
+/* Custom Styles */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
-  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.App table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+
+.App table th,
+.App table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+}
+
+.App table th {
+  background-color: #282c34;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App table img {
+  width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App button {
+  margin-top: 1rem;
 }
+
+.UploadImageLabel {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.UploadImageLabel:hover {
+  background-color: #e0e0e0;
+}
+
+.CreateNoteButton {
+  margin-top: 0rem !important;
+}
+
+.Navbar {
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+  /* position: sticky; */
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.subheading{
+  margin-top: 3rem !important;
+  margin-bottom: -1.5rem !important;
+}
+
+.Navbar h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.Subtitle {
+  font-size: 1.2rem !important;
+  color: #fff !important;
+  margin-top: 0.5rem;
+}
+

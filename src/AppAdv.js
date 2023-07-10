@@ -70,14 +70,7 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      {/* <Heading level={1}>My Notes App</Heading> */}
-      <div className="Navbar">
-  <Heading level={1}>FeatherPen</Heading>
-  <Heading level={2} className="Subtitle">Capture, Organize, and Access Your Notes Anywhere, Anytime.</Heading>
-</div>
-<div className="subheading">
-  <Heading level={2}>Add a Note</Heading>
-</div>
+      <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center" alignItems="center">
           <TextField
@@ -96,23 +89,13 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-          {/* <View as="label" htmlFor="image" style={{ alignSelf: "center" }}>
+          <View as="label" htmlFor="image" style={{ alignSelf: "center" }}>
             Upload Image:
             <input name="image" id="image" type="file" style={{ display: "none" }} />
-          </View> */}
-          <View
-  as="label"
-  htmlFor="image"
-  className="UploadImageLabel"
->
-  Upload Image
-  <input name="image" id="image" type="file" style={{ display: "none" }} />
-</View>
-
-<Button type="submit" variation="primary" className="CreateNoteButton">
-  Create Note
-</Button>
-
+          </View>
+          <Button type="submit" variation="primary">
+            Create Note
+          </Button>
         </Flex>
       </View>
       <Heading level={2}>Current Notes</Heading>

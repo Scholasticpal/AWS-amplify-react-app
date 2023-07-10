@@ -57,6 +57,23 @@ const App = ({ signOut }) => {
     fetchNotes();
     event.target.reset();
   }
+  async function createNote(event) {
+    event.preventDefault();
+    const form = new FormData(event.target);
+    const image = form.get("image");
+    const data = {
+      name: form.get("name"),
+      description: form.get("description"),
+      image: image.name,
+    };
+    if (!!data.image) await Storage.put(data.name, image);
+    await API.graphql({
+      query: createNoteMutation,
+      variables: { input: data },
+    });
+    fetchNotes();
+    event.target.reset();
+  }
 
   async function deleteNote({ id, name }) {
     const newNotes = notes.filter((note) => note.id !== id);
@@ -67,19 +84,11 @@ const App = ({ signOut }) => {
       variables: { input: { id } },
     });
   }
-
   return (
     <View className="App">
-      {/* <Heading level={1}>My Notes App</Heading> */}
-      <div className="Navbar">
-  <Heading level={1}>FeatherPen</Heading>
-  <Heading level={2} className="Subtitle">Capture, Organize, and Access Your Notes Anywhere, Anytime.</Heading>
-</div>
-<div className="subheading">
-  <Heading level={2}>Add a Note</Heading>
-</div>
+      <Heading level={1}>My Notes App</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
-        <Flex direction="row" justifyContent="center" alignItems="center">
+        <Flex direction="row" justifyContent="center">
           <TextField
             name="name"
             placeholder="Note Name"
@@ -96,62 +105,44 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
-          {/* <View as="label" htmlFor="image" style={{ alignSelf: "center" }}>
-            Upload Image:
-            <input name="image" id="image" type="file" style={{ display: "none" }} />
-          </View> */}
           <View
-  as="label"
-  htmlFor="image"
-  className="UploadImageLabel"
->
-  Upload Image
-  <input name="image" id="image" type="file" style={{ display: "none" }} />
-</View>
-
-<Button type="submit" variation="primary" className="CreateNoteButton">
-  Create Note
-</Button>
-
+            name="image"
+            as="input"
+            type="file"
+            style={{ alignSelf: "end" }}
+          />
         </Flex>
+        <View margin="1rem 0"/>
+        <Button type="submit" variation="primary">
+            Create Note
+          </Button>
       </View>
       <Heading level={2}>Current Notes</Heading>
-      <table className="NotesTable">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {notes.map((note) => (
-            <tr key={note.id || note.name}>
-              <td>
-                <Text as="strong" fontWeight={700}>
-                  {note.name}
-                </Text>
-              </td>
-              <td>{note.description}</td>
-              <td>
-                {note.image && (
-                  <Image
-                    src={note.image}
-                    alt={`visual aid for ${note.name}`}
-                    style={{ width: 100 }}
-                  />
-                )}
-              </td>
-              <td>
-                <Button variation="link" onClick={() => deleteNote(note)}>
-                  Delete note
-                </Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <View margin="3rem 0">
+        {notes.map((note) => (
+          <Flex
+            key={note.id || note.name}
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Text as="strong" fontWeight={700}>
+              {note.name}
+            </Text>
+            <Text as="span">{note.description}</Text>
+            {note.image && (
+              <Image
+                src={note.image}
+                alt={`visual aid for ${notes.name}`}
+                style={{ width: 100 }}
+              />
+            )}
+            <Button variation="link" onClick={() => deleteNote(note)}>
+              Delete note
+            </Button>
+          </Flex>
+        ))}
+      </View>
       <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
