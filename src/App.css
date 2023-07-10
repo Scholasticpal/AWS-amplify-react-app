@@ -83,3 +83,7 @@ body {
   margin-top: 0.5rem;
 }
 
+.CenteredButton {
+  display: block !important;
+  margin: 2rem auto !important;
+}

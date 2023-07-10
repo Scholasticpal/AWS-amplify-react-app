@@ -152,7 +152,8 @@ const App = ({ signOut }) => {
           ))}
         </tbody>
       </table>
-      <Button onClick={signOut}>Sign Out</Button>
+      <Button onClick={signOut} className="CenteredButton">Sign Out</Button>
+
     </View>
   );
 };
