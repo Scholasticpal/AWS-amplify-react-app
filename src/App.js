@@ -75,6 +75,8 @@ const App = ({ signOut }) => {
   <Heading level={1}>FeatherPen</Heading>
   <Heading level={2} className="Subtitle">Capture, Organize, and Access Your Notes Anywhere, Anytime.</Heading>
 </div>
+  <div className="NavbarLine"></div>
+
 <div className="subheading">
   <Heading level={2}>Add a Note</Heading>
 </div>
