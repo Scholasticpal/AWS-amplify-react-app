@@ -25,4 +25,6 @@ The FeatherPen App offers users a powerful and convenient platform to create, ma
 As a developer, the purpose of developing the FeatherPen App is to gain a deep understanding and practical experience in the process of building a full-stack web application using AWS Amplify. It covers topics such as hosting a React application, implementing user authentication, integrating a GraphQL API and database, and enabling image storage. 
 
 ## Architecture Diagram
-
+<p align="center">
+  <img src="https://github.com/Scholasticpal/AWS-amplify-react-app/raw/main/architecture%20diagram%20featherpen.png" alt="Architecture Diagram" width="800" height="540">
+</p>
