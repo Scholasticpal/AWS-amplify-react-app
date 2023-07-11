@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# FeatherPen - A Notetaking App with Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The FeatherPEn App is a feature-rich application that allows users to create, manage, and organize notes while ensuring their privacy through user authentication. This responsive Full Stack Web application is built on AWS cloud services, enabling users to access their notes securely from any device, anywhere.
 
-## Available Scripts
+## Features
+- **User Authentication**: Users can sign up, sign in, and securely manage their notes using the authentication by AWS.
+- **Create and Manage Notes**: Users can easily create, edit, and delete notes, organizing them for easy access and retrieval.
+- **Image Upload**: Users can add images to their notes, enhancing the visual experience and making the notes more expressive.
+- **Secure Storage**: The app leverages Amazon S3 for secure and reliable storage of note-related images, ensuring data integrity and durability.
+- **CRUD Operations**: Users have complete control over their notes, allowing them to perform Create, Read, Update, and Delete operations as needed.
+- **Responsive Design**: The app is built with responsiveness in mind, ensuring a seamless user experience across different devices and screen sizes.
 
-In the project directory, you can run:
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **AWS Amplify**: A comprehensive set of tools and services for building scalable and secure applications on the AWS cloud.
+- **Amazon Cognito**: A managed user identity service that handles user authentication and authorization.
+- **Amazon S3**: A scalable object storage service for securely storing note-related images.
+- **GraphQL**: A query language and runtime for APIs, used to interact with the backend services.
 
-### `npm start`
+## Purpose
+### For Users:
+The FeatherPen App offers users a powerful and convenient platform to create, manage, and secure their notes. Built on AWS cloud services, the app leverages user authentication to ensure data privacy and employs a responsive design for seamless access from any device, anywhere. With its intuitive interface and robust features, the app provides users with a reliable and efficient notetaking solution in the cloud.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### For Developers:
+As a developer, the purpose of developing the FeatherPen App is to gain a deep understanding and practical experience in the process of building a full-stack web application using AWS Amplify. It covers topics such as hosting a React application, implementing user authentication, integrating a GraphQL API and database, and enabling image storage. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture Diagram
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
